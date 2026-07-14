@@ -1,1 +1,6 @@
-
+{
+  "version": 2,
+  "framework": null,
+  "buildCommand": "composer install --no-dev && npm install && npm run build",
+  "outputDirectory": "public/build"
+}
