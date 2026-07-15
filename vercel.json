@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "npm install && npm run build",
+    "buildCommand": "npm install && npm run build && mv public/index.php public/_index.php",
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.9.0"
@@ -19,22 +19,10 @@
             "dest": "/public/$1"
         },
         {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
     ],
-    "overrides": {
-        "public/*.php": {
-            "path": "api/index.php"
-        }
-    },
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
