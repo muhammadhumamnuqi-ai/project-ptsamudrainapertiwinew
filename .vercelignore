@@ -1,0 +1,15 @@
+/vendor
+/node_modules
+/storage/framework
+/storage/logs
+/storage/debugbar
+.env
+.git
+.gitignore
+.gitattributes
+.editorconfig
+README.md
+composer.lock
+package-lock.json
+phpunit.xml
+tests/
